@@ -4,7 +4,7 @@
 
 .MainTitle {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 5vw;
+  font-size: clamp(40px, 5vw, 5vw);
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
@@ -13,7 +13,7 @@
 }
 
 .PageOneText {
-  font-size: 3.5vw;
+  font-size: clamp(35px, 3.5vw, 3.5vw);
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
@@ -45,4 +45,12 @@ body {
   color: black;
   background-color: white;
   height: 1000vh;
+}
+
+@media (max-width: 500px) {
+  .PageOneText {
+    text-align: center;
+    width: 100vw; /* Full viewport width for screens 500px or narrower */
+    left: 0; /* Align text to the left edge of the viewport */
+  }
 }
