@@ -27,10 +27,13 @@ const PageOne: React.FC = () => {
                 src={`${assetPrefix}/Treehouse.png`}
                 alt="Treehouse image"
                 className="TreehouseImage"
-                style={{ top: `${-scrollY * 0.2}px` }} // Use a negative multiplier to move the image up
+                style={{ top: `${-scrollY * 0.3}px` }} // Use a negative multiplier to move the image up
                 width={500}
                 height={500}
             />
+            <div className="PageOneText">
+                consectetur adipiscing elit, sed do eiusmod tempor ♡
+            </div>
         </main>
     );
 };
