@@ -3,16 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.PageContainer {
-  @apply h-screen w-screen relative;
-}
-
 .TreehouseImage {
-  @apply absolute right-0 top-0 h-full; /* Image is positioned absolutely at the top-right with full height */
-  object-fit: contain; /* Maintain aspect ratio */
-  width: auto;}
+  @apply fixed right-0; /* Use fixed positioning */
+  object-fit: contain;
+  width: auto;
+  height: 100vh; /* Full viewport height */
+}
 
 body {
   color: black;
   background-color: white;
+  height: 1000vh;
 }
