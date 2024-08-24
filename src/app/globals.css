@@ -1,4 +1,3 @@
-/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,8 +19,8 @@
   position: absolute;
   top: 100vh;
   left: 10%;
-  width: 60vw; /* Set the width to 60% of the viewport width */
-  word-wrap: break-word; /* Ensure text wraps to a new line if it exceeds the width */
+  width: 60vw;
+  word-wrap: break-word;
 }
 
 .TreehouseImage {
@@ -30,6 +29,16 @@
   width: auto;
   height: 100vh;
   z-index: -1;
+}
+
+.HotAirBalloonImage {
+  @apply fixed left-0;
+  object-fit: contain;
+  width: auto;
+  height: 50vh;
+  z-index: -1;
+  top: 200vh;
+  transform: rotate(10deg);
 }
 
 body {
