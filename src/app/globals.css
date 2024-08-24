@@ -35,7 +35,7 @@
   @apply fixed left-0;
   object-fit: contain;
   width: auto;
-  height: 50vh;
+  height: 75vh;
   z-index: -1;
   top: 200vh;
   transform: rotate(10deg);
@@ -50,7 +50,7 @@ body {
 @media (max-width: 500px) {
   .PageOneText {
     text-align: center;
-    width: 100vw; /* Full viewport width for screens 500px or narrower */
-    left: 0; /* Align text to the left edge of the viewport */
+    width: 100vw; 
+    left: 0;
   }
 }
