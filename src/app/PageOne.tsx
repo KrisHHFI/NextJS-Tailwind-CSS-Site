@@ -20,6 +20,9 @@ const PageOne: React.FC = () => {
 
     return (
         <main>
+            <div className="MainTitle">
+                Lorem ipsum
+            </div>
             <Image
                 src={`${assetPrefix}/Treehouse.png`}
                 alt="Treehouse image"

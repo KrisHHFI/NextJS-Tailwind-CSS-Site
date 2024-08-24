@@ -3,11 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.MainTitle {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute; /* Use absolute positioning */
+  top: 40vh; /* Position the title halfway down the viewport height */
+  left: 30%; /* Center the title horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering */
+  z-index: 10; /* Ensure the title is on top of other elements */
+}
+
 .TreehouseImage {
-  @apply fixed right-0; /* Use fixed positioning */
+  @apply fixed right-0;
   object-fit: contain;
   width: auto;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  z-index: -1;
 }
 
 body {
