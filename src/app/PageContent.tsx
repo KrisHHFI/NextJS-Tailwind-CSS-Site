@@ -4,7 +4,7 @@ export interface PageItem {
     className?: string;
     imageUrl?: string;
     imageClassName?: string;
-    imageStyle?: (scrollY: number) => React.CSSProperties;
+    scrollingEffect?: (scrollY: number) => React.CSSProperties;
     altText?: string;
 }
 
@@ -19,7 +19,7 @@ export const pageContent: PageItem[] = [
         imageUrl: '/Treehouse.png',
         imageClassName: 'TreehouseImage',
         altText: 'Treehouse image',
-        imageStyle: (scrollY: number) => ({
+        scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.3}px`
         })
     },
@@ -33,7 +33,7 @@ export const pageContent: PageItem[] = [
         imageUrl: '/HotAirBalloon.png',
         imageClassName: 'HotAirBalloonImage',
         altText: 'Hot air balloon image',
-        imageStyle: (scrollY: number) => ({
+        scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.2 + 100}vh`,
             left: `${scrollY * 0.1}%`
         })

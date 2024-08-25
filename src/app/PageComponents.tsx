@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { pageContent, PageItem } from './PageContent';
 
-const PageComponent: React.FC = () => {
+const PageComponents: React.FC = () => {
     const [scrollY, setScrollY] = useState(0);
     const assetPrefix = process.env.NODE_ENV === 'production' ? '/NextJS-Tailwind-CSS-Site' : '';
 
@@ -30,7 +30,7 @@ const PageComponent: React.FC = () => {
                             </div>
                         );
                     case 'imageComponent':
-                        const style = item.imageStyle ? item.imageStyle(scrollY) : {};
+                        const style = item.scrollingEffect ? item.scrollingEffect(scrollY) : {};
 
                         return (
                             <Image
@@ -51,4 +51,4 @@ const PageComponent: React.FC = () => {
     );
 };
 
-export default PageComponent;
+export default PageComponents;
