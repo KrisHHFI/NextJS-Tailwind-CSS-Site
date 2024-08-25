@@ -43,7 +43,7 @@ export const pageContent: PageItem[] = [
     {
         imageUrl: '/Clock.png',
         imageClassName: 'ClockImage',
-        style: { top: '200vh' },
+        style: { top: '175vh' },
         type: 'imageAndTextComponent',
         text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
     },
