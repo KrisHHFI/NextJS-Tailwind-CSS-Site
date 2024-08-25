@@ -10,6 +10,10 @@
   position: absolute;
   top: 40vh;
   left: 10%;
+
+  background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px; /* Optional: Add padding inside the box */
 }
 
 .PageOneText {
@@ -21,6 +25,9 @@
   left: 10%;
   width: 60vw;
   word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px; /* Optional: Add padding inside the box */
 }
 
 .TreehouseImage {
@@ -47,10 +54,10 @@ body {
   height: 1000vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .PageOneText {
     text-align: center;
-    width: 100vw; 
+    width: 100vw;
     left: 0;
   }
 }

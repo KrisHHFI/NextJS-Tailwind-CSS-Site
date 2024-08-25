@@ -39,7 +39,7 @@ const PageOne: React.FC = () => {
                 alt="Hot air balloon image"
                 className="HotAirBalloonImage"
                 style={{ 
-                    top: `${-scrollY * 0.2 + 125}vh`,
+                    top: `${-scrollY * 0.2 + 100}vh`,
                     left: `${scrollY * 0.1}%` 
                 }}
                 width={500}
