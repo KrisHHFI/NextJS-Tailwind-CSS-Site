@@ -1,9 +1,9 @@
-import PageOne from "./PageOne";
+import PageComponent from "./PageComponent";
 
 export default function Home() {
   return (
     <main>
-      <PageOne />
+      <PageComponent />
     </main>
   );
 }
