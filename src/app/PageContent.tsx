@@ -6,6 +6,7 @@ export interface PageItem {
     imageClassName?: string;
     scrollingEffect?: (scrollY: number) => React.CSSProperties;
     altText?: string;
+    style?: React.CSSProperties;
 }
 
 export const pageContent: PageItem[] = [
@@ -24,9 +25,10 @@ export const pageContent: PageItem[] = [
         })
     },
     {
+        style: { top: '100vh' },
         type: 'textComponent',
         text: 'consectetur adipiscing elit, sed do eiusmod tempor ♡',
-        className: 'PageOneText'
+        className: 'TextBox'
     },
     {
         type: 'imageComponent',
@@ -37,5 +39,12 @@ export const pageContent: PageItem[] = [
             top: `${-scrollY * 0.2 + 100}vh`,
             left: `${scrollY * 0.1}%`
         })
-    }
+    },
+    {
+        imageUrl: '/Clock.png',
+        imageClassName: 'ClockImage',
+        style: { top: '200vh' },
+        type: 'imageAndTextComponent',
+        text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+    },
 ];

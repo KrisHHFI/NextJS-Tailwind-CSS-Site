@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Variables */
 :root {
   --bg-opacity: rgba(255, 255, 255, 0.4);
 }
@@ -15,24 +14,53 @@
   position: absolute;
   top: 40vh;
   left: 10%;
-
   background-color: var(--bg-opacity);
   border-radius: 15px;
   padding: 10px;
 }
 
-.PageOneText {
+.TextBox {
   font-size: clamp(35px, 3.5vw, 3.5vw);
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
-  top: 100vh;
   left: 10%;
   width: 60vw;
   word-wrap: break-word;
   background-color: var(--bg-opacity);
   border-radius: 15px;
   padding: 10px;
+}
+
+.ImageAndTextBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(35px, 3vw, 3vw);
+  font-weight: bold;
+  position: absolute;
+  left: 10%;
+  width: 60vw;
+  background-color: var(--bg-opacity);
+  border-radius: 15px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.ClockImage {
+  height: 100%;
+  width: auto;
+}
+
+.ImageAndTextBoxImageChild {
+  flex: 1;
+  text-align: left;
+}
+
+.ImageAndTextBoxImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .TreehouseImage {
@@ -60,9 +88,28 @@ body {
 }
 
 @media (max-width: 700px) {
-  .PageOneText {
+  .TextBox {
     text-align: center;
     width: 100vw;
     left: 0;
+  }
+
+  .ImageAndTextBox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    left: 0;
+  }
+
+  .ImageAndTextBoxImageChild,
+  .ImageAndTextBoxImageContainer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ClockImage {
+    width: 80%;
+    height: auto;
   }
 }

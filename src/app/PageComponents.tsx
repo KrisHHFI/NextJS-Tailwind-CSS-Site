@@ -25,8 +25,33 @@ const PageComponents: React.FC = () => {
                 switch (item.type) {
                     case 'textComponent':
                         return (
-                            <div key={index} className={item.className}>
+                            <div
+                                key={index}
+                                className={item.className}
+                                style={item.style}
+                            >
                                 {item.text}
+                            </div>
+                        );
+                    case 'imageAndTextComponent':
+                        return (
+                            <div
+                                key={index}
+                                className={"ImageAndTextBox"}
+                                style={item.style}
+                            >
+                                <div className={"ImageAndTextBoxImageContainer"}>
+                                    <Image
+                                        src={`${assetPrefix}${item.imageUrl}`}
+                                        alt={item.altText || 'Image'}
+                                        className={item.imageClassName}
+                                        width={500}
+                                        height={500}
+                                    />
+                                </div>
+                                <div className={"ImageAndTextBoxImageChild"}>
+                                    {item.text}
+                                </div>
                             </div>
                         );
                     case 'imageComponent':
