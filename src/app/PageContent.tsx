@@ -8,6 +8,12 @@ export interface PageItem {
     altText?: string;
     style?: React.CSSProperties;
     hasClockImage?: boolean;
+    textOneHeader?: string;
+    textOne?: string;
+    textTwoHeader?: string;
+    textTwo?: string;
+    textThreeHeader?: string;
+    textThree?: string;
 }
 
 export const pageContent: PageItem[] = [
@@ -61,7 +67,17 @@ export const pageContent: PageItem[] = [
         imageClassName: 'TreeBranchImage',
         altText: 'Treebranch image',
         scrollingEffect: (scrollY: number) => ({
-            top: `${-scrollY * 0.09 + 200}vh`,
+            top: `${-scrollY * 0.05 + 180}vh`,
         })
+    },
+    {
+        type: 'threeChildSplitComponent',
+        style: { top: '300vh' },
+        textOneHeader: 'Duis aute',
+        textOne: 'Voluptate velit esse cillum dolore.',
+        textTwoHeader: 'Irure dolor',
+        textTwo: 'Fugiat nulla pariatur.',
+        textThreeHeader: 'Reprehenderit',
+        textThree: 'Sunt in culpa qui officia deserunt.'
     },
 ];

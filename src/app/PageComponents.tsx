@@ -54,6 +54,33 @@ const PageComponents: React.FC = () => {
                                 </div>
                             </div>
                         );
+                    case 'threeChildSplitComponent':
+                        return (
+                            <div
+                                key={index}
+                                className={"threeChildSplitComponent"}
+                                style={item.style}
+                            >
+                                <div className={"threeChildSplitComponentChild"}>
+                                    <div className={"threeChildSplitComponentHeader"}>
+                                        {item.textOneHeader}
+                                    </div>
+                                    {item.textOne}
+                                </div>
+                                <div className={"threeChildSplitComponentChild"}>
+                                    <div className={"threeChildSplitComponentHeader"}>
+                                        {item.textTwoHeader}
+                                    </div>
+                                    {item.textTwo}
+                                </div>
+                                <div className={"threeChildSplitComponentChild"}>
+                                    <div className={"threeChildSplitComponentHeader"}>
+                                        {item.textThreeHeader}
+                                    </div>
+                                    {item.textThree}
+                                </div>
+                            </div>
+                        );
                     case 'imageComponent':
                         const style = item.scrollingEffect ? item.scrollingEffect(scrollY) : {};
 

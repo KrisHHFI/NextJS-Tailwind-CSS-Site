@@ -33,6 +33,35 @@
   padding: 10px;
 }
 
+.threeChildSplitComponentChild {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+
+.threeChildSplitComponent {
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(30px, 2vw, 2vw);
+  text-transform: uppercase;
+  position: absolute;
+  left: 10%;
+  width: 60vw;
+  word-wrap: break-word;
+  text-align: center;
+  background-color: var(--bg-opacity);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.threeChildSplitComponentHeader {
+  font-size: clamp(30px, 2.25vw, 2.25vw);
+  font-weight: bold;
+}
+
 .ImageAndTextBox {
   display: flex;
   align-items: center;
