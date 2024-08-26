@@ -66,8 +66,9 @@
 
 
 .TreeBranchImage {
-  @apply fixed right-0;
+  @apply fixed;
   object-fit: contain;
+  right: 40vw;
   width: auto;
   height: 50vh;
   z-index: -1;
@@ -137,5 +138,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: var(--mobile-dimenion-div-width);
+  }
+
+  .TreeBranchImage {
+    right: 0;
   }
 }
