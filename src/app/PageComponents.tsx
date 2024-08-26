@@ -44,7 +44,7 @@ const PageComponents: React.FC = () => {
                                     <Image
                                         src={`${assetPrefix}${item.imageUrl}`}
                                         alt={item.altText || 'Image'}
-                                        className={item.imageClassName}
+                                        className={`${item.imageClassName} ${item.hasClockImage ? 'shake-animation' : ''}`}
                                         width={500}
                                         height={500}
                                     />

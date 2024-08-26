@@ -7,6 +7,7 @@ export interface PageItem {
     scrollingEffect?: (scrollY: number) => React.CSSProperties;
     altText?: string;
     style?: React.CSSProperties;
+    hasClockImage?: boolean;
 }
 
 export const pageContent: PageItem[] = [
@@ -41,6 +42,7 @@ export const pageContent: PageItem[] = [
         })
     },
     {
+        hasClockImage: true,
         imageUrl: '/Clock.png',
         imageClassName: 'ClockImage',
         style: { top: '175vh' },
