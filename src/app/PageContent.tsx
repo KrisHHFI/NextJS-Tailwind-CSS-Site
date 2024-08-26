@@ -50,6 +50,12 @@ export const pageContent: PageItem[] = [
         text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
     },
     {
+        style: { top: '250vh' },
+        type: 'textComponent',
+        text: 'Duis aute irure dolor in reprehenderit?',
+        className: 'TextBox'
+    },
+    {
         type: 'imageComponent',
         imageUrl: '/TreeBranch.png',
         imageClassName: 'TreeBranchImage',
