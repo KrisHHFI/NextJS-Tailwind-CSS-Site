@@ -67,12 +67,12 @@ export const pageContent: PageItem[] = [
         imageClassName: 'TreeBranchImage',
         altText: 'Treebranch image',
         scrollingEffect: (scrollY: number) => ({
-            top: `${-scrollY * 0.05 + 180}vh`,
+            top: `${-scrollY * 0.05 + 170}vh`,
         })
     },
     {
         type: 'threeChildSplitComponent',
-        style: { top: '300vh' },
+        style: { top: '280vh' },
         textOneHeader: 'Duis aute',
         textOne: 'Voluptate velit esse cillum dolore.',
         textTwoHeader: 'Irure dolor',
