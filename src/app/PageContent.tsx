@@ -49,4 +49,13 @@ export const pageContent: PageItem[] = [
         type: 'imageAndTextComponent',
         text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
     },
+    {
+        type: 'imageComponent',
+        imageUrl: '/TreeBranch.png',
+        imageClassName: 'TreeBranchImage',
+        altText: 'Treebranch image',
+        scrollingEffect: (scrollY: number) => ({
+            top: `${-scrollY * 0.1 + 250}vh`,
+        })
+    },
 ];

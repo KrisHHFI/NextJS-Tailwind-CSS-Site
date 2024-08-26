@@ -64,6 +64,15 @@
   justify-content: flex-end;
 }
 
+
+.TreeBranchImage {
+  @apply fixed right-0;
+  object-fit: contain;
+  width: auto;
+  height: 75vh;
+  z-index: -1;
+}
+
 .TreehouseImage {
   @apply fixed right-0;
   object-fit: contain;
@@ -78,7 +87,6 @@
   width: auto;
   height: 75vh;
   z-index: -1;
-  top: 200vh;
   transform: rotate(10deg);
 }
 
