@@ -49,7 +49,7 @@ const PageComponents: React.FC = () => {
                                         height={500}
                                     />
                                 </div>
-                                <div className={"ImageAndTextBoxImageChild"}>
+                                <div className={"ImageAndTextBoxChild"}>
                                     {item.text}
                                 </div>
                             </div>
