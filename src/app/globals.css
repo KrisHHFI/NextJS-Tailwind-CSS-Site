@@ -69,7 +69,7 @@
   @apply fixed right-0;
   object-fit: contain;
   width: auto;
-  height: 75vh;
+  height: 50vh;
   z-index: -1;
 }
 
