@@ -4,6 +4,7 @@
 
 :root {
   --bg-opacity: rgba(255, 255, 255, 0.4);
+  --mobile-dimenion-div-width: 95%;
 }
 
 .MainTitle {
@@ -95,18 +96,18 @@ body {
   .MainTitle {
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
+    width: var(--mobile-dimenion-div-width);
   }
 
   .TextBox {
     text-align: center;
-    width: 95%;
+    width: var(--mobile-dimenion-div-width);
     left: 0;
   }
 
   .ImageAndTextBox {
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
+    width: var(--mobile-dimenion-div-width);
   }
 }
