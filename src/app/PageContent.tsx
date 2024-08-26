@@ -33,9 +33,9 @@ export const pageContent: PageItem[] = [
     },
     {
         type: 'imageComponent',
-        imageUrl: '/HotAirBalloon.png',
+        imageUrl: '/HotAirBalloon.png', /* Image credit: Pexels, Don Hainzl, Yellow Hot Air Balloon on Air */
         imageClassName: 'HotAirBalloonImage',
-        altText: 'Hot air balloon image',
+        altText: 'Hot air balloon image (Pexels, Don Hainzl)',
         scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.2 + 100}vh`,
             left: `${scrollY * 0.1}%`
