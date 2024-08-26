@@ -88,28 +88,25 @@ body {
 }
 
 @media (max-width: 700px) {
+  .ClockImage {
+    min-height: 150px;
+  }
+
+  .MainTitle {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+
   .TextBox {
     text-align: center;
-    width: 100vw;
+    width: 95%;
     left: 0;
   }
 
   .ImageAndTextBox {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    left: 0;
-  }
-
-  .ImageAndTextBoxChild,
-  .ImageAndTextBoxImageContainer {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .ClockImage {
-    width: 80%;
-    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
   }
 }
