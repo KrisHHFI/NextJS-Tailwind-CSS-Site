@@ -8,6 +8,7 @@ export interface PageItem {
     altText?: string;
     style?: React.CSSProperties;
     hasClockImage?: boolean;
+    hasCarImage?: boolean;
     textOneHeader?: string;
     textOne?: string;
     textTwoHeader?: string;
@@ -53,7 +54,7 @@ export const pageContent: PageItem[] = [
         imageClassName: 'ClockImage',
         style: { top: '175vh' },
         type: 'imageAndTextComponent',
-        text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+        text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     },
     {
         style: { top: '250vh' },
@@ -79,5 +80,13 @@ export const pageContent: PageItem[] = [
         textTwo: 'Fugiat nulla pariatur.',
         textThreeHeader: 'Reprehenderit',
         textThree: 'Sunt in culpa qui officia deserunt.'
+    },
+    {
+        hasCarImage: true,
+        imageUrl: '/Car.png',
+        imageClassName: 'CarImage',
+        style: { top: '340vh' },
+        type: 'imageAndTextComponent',
+        text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
     },
 ];
