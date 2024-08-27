@@ -83,7 +83,7 @@ export const pageContent: PageItem[] = [
     },
     {
         hasCarImage: true,
-        imageUrl: '/Car.png',
+        imageUrl: '/Car.png',/*Image credit: Pexels, hosein ashrafosadat */
         imageClassName: 'CarImage',
         style: { top: '340vh' },
         type: 'imageAndTextComponent',
