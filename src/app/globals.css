@@ -57,19 +57,17 @@
   padding-right: 0.5vw;
   box-sizing: border-box;
   text-align: center;
-  min-width: 0; /* Important to allow flex items to shrink */
+  min-width: 0;
 }
 
 .threeChildSplitComponentHeader {
   font-size: clamp(20px, 2.25vw, 2.25vw);
   font-weight: bold;
   width: 100%;
-  word-break: break-word; /* Use word-break instead of word-wrap */
+  word-break: break-word;
   white-space: normal;
   text-align: center;
 }
-
-
 
 .ImageAndTextBox {
   display: flex;
@@ -102,21 +100,21 @@
   justify-content: flex-end;
 }
 
-
 .TreeBranchImage {
-  @apply fixed;
+  @apply fixed left-0;
   object-fit: contain;
-  right: 40vw;
   width: auto;
   height: 50vh;
   z-index: -1;
+  transform: scaleX(-1);
+
 }
 
 .TreehouseImage {
   @apply fixed right-0;
   object-fit: contain;
   width: auto;
-  height: 100vh;
+  height: 200vh;
   z-index: -1;
 }
 
