@@ -89,4 +89,16 @@ export const pageContent: PageItem[] = [
         type: 'imageAndTextComponent',
         text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
     },
+    {
+        style: { top: '410vh' },
+        type: 'textComponent',
+        text: 'culpa qui officia...',
+        className: 'TextBox'
+    },
+    {
+        type: 'imageComponent',
+        imageUrl: '/Grass.png',
+        imageClassName: 'GrassImage',
+        altText: 'Grass image',
+    },
 ];

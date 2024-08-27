@@ -123,6 +123,15 @@
   z-index: -1;
 }
 
+.GrassImage {
+  @apply absolute right-0;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  top: 450vh;
+}
+
 .HotAirBalloonImage {
   @apply fixed left-0;
   object-fit: contain;
@@ -135,7 +144,7 @@
 body {
   color: black;
   background-color: white;
-  height: 1000vh;
+  height: 450vh;
 }
 
 @keyframes shake {
