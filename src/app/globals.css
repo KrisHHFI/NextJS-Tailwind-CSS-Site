@@ -56,7 +56,7 @@
 }
 
 .TreeBranchImage {
-  @apply fixed left-0 object-contain w-auto h-[50vh] -z-10 scale-x-[-1];
+  @apply fixed right-0 object-contain w-auto h-[50vh] -z-10;
 }
 
 .TreehouseImage {
