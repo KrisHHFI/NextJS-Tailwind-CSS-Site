@@ -5,11 +5,11 @@ export interface PageItem {
     hasClockImage?: boolean;
     imageClassName?: string;
     imageOneLink?: string;
-    imageOneUrl?: string;
+    imageOneURL?: string;
     imageThreeLink?: string;
-    imageThreeUrl?: string;
+    imageThreeURL?: string;
     imageTwoLink?: string;
-    imageTwoUrl?: string;
+    imageTwoURL?: string;
     imageUrl?: string;
     scrollingEffect?: (scrollY: number) => React.CSSProperties;
     style?: React.CSSProperties;

@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { pageContent, PageItem } from './PageContent';
+import { pageContent } from './PageContent';
+import { PageItem } from './Interfaces';
 
 const PageComponents: React.FC = () => {
     const [scrollY, setScrollY] = useState(0);
