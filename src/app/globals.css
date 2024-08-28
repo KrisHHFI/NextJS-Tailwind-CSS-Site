@@ -141,12 +141,16 @@
 }
 
 .footerIcon {
-  padding-left: 4vw;
-  padding-right: 4vw;
   object-fit: contain;
   width: auto;
   height: 5vh;
   z-index: 1;
+}
+
+.footerIconLink {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width:fit-content;
 }
 
 .HotAirBalloonImage {

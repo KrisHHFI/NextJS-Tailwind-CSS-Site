@@ -102,7 +102,7 @@ const PageComponents: React.FC = () => {
                                 className={"footerIcons"}
                                 style={item.style}
                             >
-                                 <a href={`mailto:${item.imageOneLink}`} target="_blank" rel="noopener noreferrer">
+                                 <a className={"footerIconLink"} href={`mailto:${item.imageOneLink}`} target="_blank" rel="noopener noreferrer">
                                     <Image
                                         key={index}
                                         src={`${assetPrefix}${item.imageOneURL}`}
@@ -112,7 +112,7 @@ const PageComponents: React.FC = () => {
                                         height={500}
                                     />
                                 </a>
-                                <a href={`${assetPrefix}${item.imageTwoLink}`} target="_blank" rel="noopener noreferrer">
+                                <a className={"footerIconLink"} href={`${assetPrefix}${item.imageTwoLink}`} target="_blank" rel="noopener noreferrer">
                                     <Image
                                         key={index}
                                         src={`${assetPrefix}${item.imageTwoURL}`}
@@ -122,7 +122,7 @@ const PageComponents: React.FC = () => {
                                         height={500}
                                     />
                                 </a>
-                                <a href={`${assetPrefix}${item.imageThreeLink}`} target="_blank" rel="noopener noreferrer">
+                                <a className={"footerIconLink"} href={`${assetPrefix}${item.imageThreeLink}`} target="_blank" rel="noopener noreferrer">
                                     <Image
                                         key={index}
                                         src={`${assetPrefix}${item.imageThreeURL}`}
