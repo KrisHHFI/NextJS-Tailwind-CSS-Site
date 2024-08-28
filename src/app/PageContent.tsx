@@ -1,120 +1,98 @@
-export interface PageItem {
-    type: string;
-    text?: string;
-    className?: string;
-    imageUrl?: string;
-    imageOneLink?: string;
-    imageOneUrl?: string;
-    imageTwoLink?: string;
-    imageTwoUrl?: string;
-    imageThreeLink?: string;
-    imageThreeUrl?: string;
-    imageClassName?: string;
-    scrollingEffect?: (scrollY: number) => React.CSSProperties;
-    altText?: string;
-    style?: React.CSSProperties;
-    hasClockImage?: boolean;
-    hasCarImage?: boolean;
-    textOneHeader?: string;
-    textOne?: string;
-    textTwoHeader?: string;
-    textTwo?: string;
-    textThreeHeader?: string;
-    textThree?: string;
-}
+import { PageItem } from './Interfaces';
 
 export const pageContent: PageItem[] = [
     {
-        type: 'textComponent',
+        className: 'MainTitle',
         text: 'Lorem ipsum',
-        className: 'MainTitle'
+        type: 'textComponent'
     },
     {
-        type: 'imageComponent',
-        imageUrl: '/Treehouse.png',
-        imageClassName: 'TreehouseImage',
         altText: 'Treehouse image',
+        imageClassName: 'TreehouseImage',
+        imageUrl: '/Treehouse.png',
         scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.3}px`
-        })
+        }),
+        type: 'imageComponent'
     },
     {
+        className: 'TextBox',
         style: { top: '100vh' },
-        type: 'textComponent',
         text: 'consectetur adipiscing elit, sed do eiusmod tempor ♡',
-        className: 'TextBox'
+        type: 'textComponent'
     },
     {
-        type: 'imageComponent',
-        imageUrl: '/HotAirBalloon.png', /* Image credit: Pexels, Don Hainzl, Yellow Hot Air Balloon on Air */
-        imageClassName: 'HotAirBalloonImage',
         altText: 'Hot air balloon image (Pexels, Don Hainzl)',
+        imageClassName: 'HotAirBalloonImage',
+        imageUrl: '/HotAirBalloon.png', /* Image credit: Pexels, Don Hainzl, Yellow Hot Air Balloon on Air */
         scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.2 + 100}vh`,
             left: `${scrollY * 0.1}%`
-        })
+        }),
+        type: 'imageComponent'
     },
     {
         hasClockImage: true,
-        imageUrl: '/Clock.png',
         imageClassName: 'ClockImage',
+        imageUrl: '/Clock.png',
         style: { top: '175vh' },
-        type: 'imageAndTextComponent',
         text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+        type: 'imageAndTextComponent'
     },
     {
+        className: 'TextBox',
         style: { top: '250vh' },
-        type: 'textComponent',
         text: 'Duis aute irure dolor in reprehenderit?',
-        className: 'TextBox'
+        type: 'textComponent'
     },
     {
-        type: 'imageComponent',
-        imageUrl: '/TreeBranch.png',
-        imageClassName: 'TreeBranchImage',
         altText: 'Treebranch image',
+        imageClassName: 'TreeBranchImage',
+        imageUrl: '/TreeBranch.png',
         scrollingEffect: (scrollY: number) => ({
             top: `${-scrollY * 0.05 + 100}vh`,
-        })
+        }),
+        type: 'imageComponent'
     },
     {
-        type: 'threeChildSplitComponent',
         style: { top: '280vh' },
-        textOneHeader: 'Duis aute',
         textOne: 'Voluptate velit esse cillum dolore.',
-        textTwoHeader: 'Irure dolor',
-        textTwo: 'Fugiat nulla pariatur.',
+        textOneHeader: 'Duis aute',
+        textThree: 'Sunt in culpa qui officia deserunt.',
         textThreeHeader: 'Reprehenderit',
-        textThree: 'Sunt in culpa qui officia deserunt.'
+        textTwo: 'Fugiat nulla pariatur.',
+        textTwoHeader: 'Irure dolor',
+        type: 'threeChildSplitComponent'
     },
     {
+        altText: 'Selective Focus Photography of Yellow Car Toy (Pexels, hosein ashrafosadat)',
         hasCarImage: true,
-        imageUrl: '/Car.png',/*Image credit: Pexels, hosein ashrafosadat */
         imageClassName: 'CarImage',
+        imageUrl: '/Car.png',/* Image credit: Pexels, hosein ashrafosadat */
         style: { top: '340vh' },
-        type: 'imageAndTextComponent',
         text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+        type: 'imageAndTextComponent'
     },
     {
+        className: 'TextBox',
         style: { top: '410vh' },
-        type: 'textComponent',
         text: 'culpa qui officia...',
-        className: 'TextBox'
+        type: 'textComponent'
     },
     {
-        type: 'imageComponent',
-        imageUrl: '/Grass.png',
-        imageClassName: 'GrassImage',
         altText: 'Grass image',
+        imageClassName: 'GrassImage',
+        imageUrl: '/Grass.png',
+        type: 'imageComponent'
     },
     {
-        type: 'footerIcons',
-        imageOneURL: '/Envelope.png',
-        imageOneLink: 'kristopherpepperuk@gmail.com',
-        imageTwoURL: '/GitHub.png',
-        imageTwoLink: 'https://github.com/KrisHHFI',
-        imageThreeURL: '/LinkedIn.png',
-        imageThreeLink: 'https://www.linkedin.com/in/kristopher-pepper-824184136/',
         altText: 'Social icon image',
-    },
+        imageOneLink: 'kristopherpepperuk@gmail.com',
+        imageOneURL: '/Envelope.png',
+        imageThreeLink: 'https://www.linkedin.com/in/kristopher-pepper-824184136/',
+        imageThreeURL: '/LinkedIn.png',
+        imageTwoLink: 'https://github.com/KrisHHFI',
+        imageTwoURL: '/GitHub.png',
+        type: 'footerIcons'
+    }
 ];
