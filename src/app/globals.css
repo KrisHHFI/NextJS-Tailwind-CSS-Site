@@ -2,285 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom properties for reusability */
 :root {
   --bg-opacity: rgba(255, 255, 255, 0.4);
-  --mobile-dimenion-div-width: 95%;
+  --mobile-dimension-div-width: 95%;
 }
 
+/* Utilize Tailwind's utility classes */
 .MainTitle {
+  @apply absolute top-[40vh] left-[10%] bg-[var(--bg-opacity)] rounded-lg p-2 text-black font-bold uppercase;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: clamp(40px, 5vw, 5vw);
-  font-weight: bold;
-  text-transform: uppercase;
-  position: absolute;
-  top: 40vh;
-  left: 10%;
-  background-color: var(--bg-opacity);
-  border-radius: 15px;
-  padding: 10px;
 }
 
 .TextBox {
+  @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-2 text-black font-bold uppercase break-words;
   font-size: clamp(35px, 3.5vw, 3.5vw);
-  font-weight: bold;
-  text-transform: uppercase;
-  position: absolute;
-  left: 10%;
-  width: 60vw;
-  word-wrap: break-word;
-  background-color: var(--bg-opacity);
-  border-radius: 15px;
-  padding: 10px;
 }
 
 .threeChildSplitComponent {
-  display: flex;
-  flex-direction: row;
+  @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-2 text-black font-bold uppercase flex flex-row items-center text-center break-words;
   font-size: clamp(16px, 2vw, 2vw);
-  text-transform: uppercase;
-  position: absolute;
-  left: 10%;
-  width: 60vw;
-  text-align: center;
-  background-color: var(--bg-opacity);
-  border-radius: 15px;
-  padding: 10px;
-  word-wrap: break-word;
 }
 
 .threeChildSplitComponentChild {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  box-sizing: border-box;
-  text-align: center;
-  min-width: 0;
+  @apply flex flex-col items-center px-2 text-center min-w-0;
 }
 
 .threeChildSplitComponentHeader {
+  @apply font-bold text-center;
   font-size: clamp(20px, 2.25vw, 2.25vw);
-  font-weight: bold;
-  width: 100%;
-  word-break: break-word;
-  white-space: normal;
-  text-align: center;
 }
 
 .ImageAndTextBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-5 gap-5 flex items-center justify-between text-black font-bold;
   font-size: clamp(20px, 2.5vw, 2.5vw);
-  font-weight: bold;
-  position: absolute;
-  left: 10%;
-  width: 60vw;
-  background-color: var(--bg-opacity);
-  border-radius: 15px;
-  padding: 20px;
-  gap: 20px;
 }
 
 .ClockImage {
-  height: 20vw;
-  width: auto;
+  @apply h-[20vw] w-auto;
 }
 
 .CarImage {
-  height: 15vw;
-  width: auto;
+  @apply h-[15vw] w-auto;
 }
 
 .ImageAndTextBoxChild {
-  flex: 1;
-  text-align: left;
+  @apply flex-1 text-left;
 }
 
 .ImageAndTextBoxImageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  @apply flex-1 flex justify-end;
 }
 
 .TreeBranchImage {
-  @apply fixed left-0;
-  object-fit: contain;
-  width: auto;
-  height: 50vh;
-  z-index: -1;
-  transform: scaleX(-1);
+  @apply fixed left-0 object-contain w-auto h-[50vh] -z-10 scale-x-[-1];
 }
 
 .TreehouseImage {
-  @apply fixed right-0;
-  object-fit: contain;
-  width: auto;
-  height: 200vh;
-  z-index: -1;
+  @apply fixed right-0 object-contain w-auto h-[200vh] -z-10;
 }
 
 .GrassImage {
-  @apply absolute right-0;
-  object-fit: contain;
-  min-width: 100%;
-  height: auto;
-  z-index: -1;
-  bottom: 0;
+  @apply absolute right-0 object-contain min-w-full h-auto -z-10 bottom-0;
 }
 
 .footerIcons {
-  @apply absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  bottom: 3vh;
+  @apply absolute flex flex-row justify-center w-full bottom-[3vh];
 }
 
 .footerIcon {
-  object-fit: contain;
-  width: auto;
-  height: 5vh;
-  z-index: 1;
+  @apply object-contain w-auto h-[5vh] z-10;
 }
 
 .footerIconLink {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  width:fit-content;
+  @apply mx-[4vw] w-fit;
 }
 
 .HotAirBalloonImage {
-  @apply fixed left-0;
-  object-fit: contain;
-  width: auto;
-  height: 75vh;
-  z-index: -1;
-  transform: rotate(10deg);
+  @apply fixed left-0 object-contain w-auto h-[75vh] -z-10 rotate-[10deg];
 }
 
 body {
-  color: black;
-  background-color: white;
-  height: 500vh;
-  position: relative;
-
+  @apply text-black bg-white h-[500vh] relative;
 }
 
+/* Keyframes for animations */
 @keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .shake-animation {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
+  @apply animate-[shake_0.5s_infinite];
 }
 
-
 .revving-animation {
-  animation: revving 1s ease-in-out infinite;
+  @apply animate-[revving_1s_ease-in-out_infinite];
 }
 
 @keyframes revving {
-  0% {
-    transform: rotate(0deg) translateX(0) translateY(0);
-  }
-
-  30% {
-    transform: rotate(-5deg) translateX(-2%) translateY(-5%);
-  }
-
-  50% {
-    transform: rotate(-8deg) translateX(-4%) translateY(-10%);
-  }
-
-  70% {
-    transform: rotate(-5deg) translateX(-2%) translateY(-5%);
-  }
-
-  100% {
-    transform: rotate(0deg) translateX(0) translateY(0);
-  }
+  0% { transform: rotate(0deg) translateX(0) translateY(0); }
+  30% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
+  50% { transform: rotate(-8deg) translateX(-4%) translateY(-10%); }
+  70% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
+  100% { transform: rotate(0deg) translateX(0) translateY(0); }
 }
 
 @media (max-width: 700px) {
   .ClockImage {
-    min-height: 150px;
+    @apply min-h-[150px];
   }
 
   .CarImage {
-    min-height: 80px;
+    @apply min-h-[80px];
   }
 
   .MainTitle {
-    left: 50%;
-    transform: translateX(-50%);
-    width: var(--mobile-dimenion-div-width);
+    @apply left-[50%] translate-x-[-50%] w-[var(--mobile-dimension-div-width)];
   }
 
   .TextBox {
-    text-align: center;
-    width: var(--mobile-dimenion-div-width);
-    left: 0;
+    @apply text-center w-[var(--mobile-dimension-div-width)] left-0;
   }
 
   .threeChildSplitComponent {
-    width: var(--mobile-dimenion-div-width);
-    left: 0;
+    @apply w-[var(--mobile-dimension-div-width)] left-0;
   }
 
   .ImageAndTextBox {
-    left: 50%;
-    transform: translateX(-50%);
-    width: var(--mobile-dimenion-div-width);
+    @apply left-[50%] translate-x-[-50%] w-[var(--mobile-dimension-div-width)];
   }
 
   .TreeBranchImage {
-    right: 0;
+    @apply right-0;
   }
 }
