@@ -1,6 +1,6 @@
 # NextJS Tailwind CSS Site
 
-<img src=""/>
+<img src="Promo.gif"/>
 
 ### Launch the App
 
