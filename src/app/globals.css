@@ -7,24 +7,6 @@
   --mobile-dimenion-div-width: 95%;
 }
 
-.footerIcons {
-  @apply absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  top: 470vh;
-  width: 100%;
-}
-
-.footerIcon {
-  padding-left: 2vw;
-  padding-right: 2vw;
-  object-fit: contain;
-  width: auto;
-  height: 5vh;
-  z-index: 1;
-}
-
 .MainTitle {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: clamp(40px, 5vw, 5vw);
@@ -130,7 +112,6 @@
   height: 50vh;
   z-index: -1;
   transform: scaleX(-1);
-
 }
 
 .TreehouseImage {
@@ -144,10 +125,28 @@
 .GrassImage {
   @apply absolute right-0;
   object-fit: contain;
-  width: 100%;
+  min-width: 100%;
   height: auto;
   z-index: -1;
-  top: 450vh;
+  bottom: 0;
+}
+
+.footerIcons {
+  @apply absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  bottom: 3vh;
+}
+
+.footerIcon {
+  padding-left: 4vw;
+  padding-right: 4vw;
+  object-fit: contain;
+  width: auto;
+  height: 5vh;
+  z-index: 1;
 }
 
 .HotAirBalloonImage {
@@ -162,7 +161,9 @@
 body {
   color: black;
   background-color: white;
-  height: 450vh;
+  height: 500vh;
+  position: relative;
+
 }
 
 @keyframes shake {
