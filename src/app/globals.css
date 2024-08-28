@@ -2,13 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Define custom properties for reusability */
+/* Variables */
 :root {
   --bg-opacity: rgba(255, 255, 255, 0.4);
   --mobile-dimension-div-width: 95%;
 }
 
-/* Utilize Tailwind's utility classes */
+.CarImage {
+  @apply h-[15vw] w-auto;
+}
+
+.ClockImage {
+  @apply h-[20vw] w-auto;
+}
+
+.footerIcon {
+  @apply object-contain w-auto h-[5vh] z-10;
+}
+
+.footerIconLink {
+  @apply mx-[4vw] w-fit;
+}
+
+.footerIcons {
+  @apply absolute flex flex-row justify-center w-full bottom-[3vh];
+}
+
+.HotAirBalloonImage {
+  @apply fixed left-0 object-contain w-auto h-[75vh] -z-10 rotate-[10deg];
+}
+
+.ImageAndTextBox {
+  @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-5 gap-5 flex items-center justify-between text-black font-bold;
+  font-size: clamp(20px, 2.5vw, 2.5vw);
+}
+
+.ImageAndTextBoxChild {
+  @apply flex-1 text-left;
+}
+
+.ImageAndTextBoxImageContainer {
+  @apply flex-1 flex justify-end;
+}
+
 .MainTitle {
   @apply absolute top-[40vh] left-[10%] bg-[var(--bg-opacity)] rounded-lg p-2 text-black font-bold uppercase;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -18,6 +54,18 @@
 .TextBox {
   @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-2 text-black font-bold uppercase break-words;
   font-size: clamp(35px, 3.5vw, 3.5vw);
+}
+
+.TreeBranchImage {
+  @apply fixed right-0 object-contain w-auto h-[50vh] -z-10;
+}
+
+.TreehouseImage {
+  @apply fixed right-0 object-contain w-auto h-[200vh] -z-10;
+}
+
+.GrassImage {
+  @apply absolute right-0 object-contain min-w-full h-auto -z-10 bottom-0;
 }
 
 .threeChildSplitComponent {
@@ -34,60 +82,19 @@
   font-size: clamp(20px, 2.25vw, 2.25vw);
 }
 
-.ImageAndTextBox {
-  @apply absolute left-[10%] w-[60vw] bg-[var(--bg-opacity)] rounded-lg p-5 gap-5 flex items-center justify-between text-black font-bold;
-  font-size: clamp(20px, 2.5vw, 2.5vw);
-}
-
-.ClockImage {
-  @apply h-[20vw] w-auto;
-}
-
-.CarImage {
-  @apply h-[15vw] w-auto;
-}
-
-.ImageAndTextBoxChild {
-  @apply flex-1 text-left;
-}
-
-.ImageAndTextBoxImageContainer {
-  @apply flex-1 flex justify-end;
-}
-
-.TreeBranchImage {
-  @apply fixed right-0 object-contain w-auto h-[50vh] -z-10;
-}
-
-.TreehouseImage {
-  @apply fixed right-0 object-contain w-auto h-[200vh] -z-10;
-}
-
-.GrassImage {
-  @apply absolute right-0 object-contain min-w-full h-auto -z-10 bottom-0;
-}
-
-.footerIcons {
-  @apply absolute flex flex-row justify-center w-full bottom-[3vh];
-}
-
-.footerIcon {
-  @apply object-contain w-auto h-[5vh] z-10;
-}
-
-.footerIconLink {
-  @apply mx-[4vw] w-fit;
-}
-
-.HotAirBalloonImage {
-  @apply fixed left-0 object-contain w-auto h-[75vh] -z-10 rotate-[10deg];
-}
-
 body {
   @apply text-black bg-white h-[500vh] relative;
 }
 
 /* Keyframes for animations */
+@keyframes revving {
+  0% { transform: rotate(0deg) translateX(0) translateY(0); }
+  30% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
+  50% { transform: rotate(-8deg) translateX(-4%) translateY(-10%); }
+  70% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
+  100% { transform: rotate(0deg) translateX(0) translateY(0); }
+}
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -102,20 +109,12 @@ body {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.shake-animation {
-  @apply animate-[shake_0.5s_infinite];
-}
-
 .revving-animation {
   @apply animate-[revving_1s_ease-in-out_infinite];
 }
 
-@keyframes revving {
-  0% { transform: rotate(0deg) translateX(0) translateY(0); }
-  30% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
-  50% { transform: rotate(-8deg) translateX(-4%) translateY(-10%); }
-  70% { transform: rotate(-5deg) translateX(-2%) translateY(-5%); }
-  100% { transform: rotate(0deg) translateX(0) translateY(0); }
+.shake-animation {
+  @apply animate-[shake_0.5s_infinite];
 }
 
 @media (max-width: 700px) {
@@ -127,8 +126,12 @@ body {
     @apply min-h-[80px];
   }
 
-  .MainTitle {
+  .ImageAndTextBox {
     @apply left-[50%] translate-x-[-50%] w-[var(--mobile-dimension-div-width)];
+  }
+
+  .MainTitle {
+    @apply left-[50%] text-center translate-x-[-50%] w-[var(--mobile-dimension-div-width)];
   }
 
   .TextBox {
@@ -137,10 +140,6 @@ body {
 
   .threeChildSplitComponent {
     @apply w-[var(--mobile-dimension-div-width)] left-0;
-  }
-
-  .ImageAndTextBox {
-    @apply left-[50%] translate-x-[-50%] w-[var(--mobile-dimension-div-width)];
   }
 
   .TreeBranchImage {
