@@ -95,6 +95,39 @@ const PageComponents: React.FC = () => {
                                 height={500}
                             />
                         );
+                    case 'footerIcons':
+                        return (
+                            <div
+                                key={index}
+                                className={"footerIcons"}
+                                style={item.style}
+                            >
+                                <Image
+                                    key={index}
+                                    src={`${assetPrefix}${item.imageOneURL}`}
+                                    alt={item.altText || 'Image'}
+                                    className={"footerIcon"}
+                                    width={500}
+                                    height={500}
+                                />
+                                <Image
+                                    key={index}
+                                    src={`${assetPrefix}${item.imageTwoURL}`}
+                                    alt={item.altText || 'Image'}
+                                    className={"footerIcon"}
+                                    width={500}
+                                    height={500}
+                                />
+                                <Image
+                                    key={index}
+                                    src={`${assetPrefix}${item.imageThreeURL}`}
+                                    alt={item.altText || 'Image'}
+                                    className={"footerIcon"}
+                                    width={500}
+                                    height={500}
+                                />
+                            </div>
+                        );
                     default:
                         return null;
                 }

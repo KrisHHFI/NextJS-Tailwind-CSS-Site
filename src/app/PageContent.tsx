@@ -3,6 +3,9 @@ export interface PageItem {
     text?: string;
     className?: string;
     imageUrl?: string;
+    imageOneUrl?: string;
+    imageTwoUrl?: string;
+    imageThreeUrl?: string;
     imageClassName?: string;
     scrollingEffect?: (scrollY: number) => React.CSSProperties;
     altText?: string;
@@ -100,5 +103,12 @@ export const pageContent: PageItem[] = [
         imageUrl: '/Grass.png',
         imageClassName: 'GrassImage',
         altText: 'Grass image',
+    },
+    {
+        type: 'footerIcons',
+        imageOneURL: '/Envelope.png',
+        imageTwoURL: '/GitHub.png',
+        imageThreeURL: '/LinkedIn.png',
+        altText: 'Social icon image',
     },
 ];
