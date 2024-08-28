@@ -3,8 +3,11 @@ export interface PageItem {
     text?: string;
     className?: string;
     imageUrl?: string;
+    imageOneLink?: string;
     imageOneUrl?: string;
+    imageTwoLink?: string;
     imageTwoUrl?: string;
+    imageThreeLink?: string;
     imageThreeUrl?: string;
     imageClassName?: string;
     scrollingEffect?: (scrollY: number) => React.CSSProperties;
@@ -107,8 +110,11 @@ export const pageContent: PageItem[] = [
     {
         type: 'footerIcons',
         imageOneURL: '/Envelope.png',
+        imageOneLink: 'kristopherpepperuk@gmail.com',
         imageTwoURL: '/GitHub.png',
+        imageTwoLink: 'https://github.com/KrisHHFI',
         imageThreeURL: '/LinkedIn.png',
+        imageThreeLink: 'https://www.linkedin.com/in/kristopher-pepper-824184136/',
         altText: 'Social icon image',
     },
 ];

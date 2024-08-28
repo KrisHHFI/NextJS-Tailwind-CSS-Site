@@ -102,30 +102,36 @@ const PageComponents: React.FC = () => {
                                 className={"footerIcons"}
                                 style={item.style}
                             >
-                                <Image
-                                    key={index}
-                                    src={`${assetPrefix}${item.imageOneURL}`}
-                                    alt={item.altText || 'Image'}
-                                    className={"footerIcon"}
-                                    width={500}
-                                    height={500}
-                                />
-                                <Image
-                                    key={index}
-                                    src={`${assetPrefix}${item.imageTwoURL}`}
-                                    alt={item.altText || 'Image'}
-                                    className={"footerIcon"}
-                                    width={500}
-                                    height={500}
-                                />
-                                <Image
-                                    key={index}
-                                    src={`${assetPrefix}${item.imageThreeURL}`}
-                                    alt={item.altText || 'Image'}
-                                    className={"footerIcon"}
-                                    width={500}
-                                    height={500}
-                                />
+                                 <a href={`mailto:${item.imageOneLink}`} target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        key={index}
+                                        src={`${assetPrefix}${item.imageOneURL}`}
+                                        alt={item.altText || 'Image'}
+                                        className={"footerIcon"}
+                                        width={500}
+                                        height={500}
+                                    />
+                                </a>
+                                <a href={`${assetPrefix}${item.imageTwoLink}`} target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        key={index}
+                                        src={`${assetPrefix}${item.imageTwoURL}`}
+                                        alt={item.altText || 'Image'}
+                                        className={"footerIcon"}
+                                        width={500}
+                                        height={500}
+                                    />
+                                </a>
+                                <a href={`${assetPrefix}${item.imageThreeLink}`} target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        key={index}
+                                        src={`${assetPrefix}${item.imageThreeURL}`}
+                                        alt={item.altText || 'Image'}
+                                        className={"footerIcon"}
+                                        width={500}
+                                        height={500}
+                                    />
+                                </a>
                             </div>
                         );
                     default:
